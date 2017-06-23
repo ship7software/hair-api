@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Sistema HAIR",
+    "shortName": "hair",
+    "logoUrl": "https://preview.ibb.co/gVQunk/hair_black.png",
+    "whiteLogoUrl": "https://preview.ibb.co/gBDatQ/hair_white.png",
+    "blackLogoUrl": "https://preview.ibb.co/gVQunk/hair_black.png"
+  },
+  {
+    "name": "Sistema CAR",
+    "shortName": "car",
+    "logoUrl": "https://preview.ibb.co/hX9WYQ/car_black.png",
+    "whiteLogoUrl": "https://preview.ibb.co/ncXktQ/car_white.png",
+    "blackLogoUrl": "https://preview.ibb.co/hX9WYQ/car_black.png"
+  }
+]

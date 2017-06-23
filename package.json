@@ -1,0 +1,58 @@
+{
+  "name": "hair-api",
+  "version": "0.1.0",
+  "description": "API do Sistema HAIR",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "NODE_ENV=development node index.js",
+    "lint": "./node_modules/eslint/bin/eslint.js .",
+    "test": "NODE_ENV=test node resources/populate && node_modules/.bin/_mocha test/run.js --timeout=100000",
+    "coverage": "NODE_ENV=test node resources/populate && node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- --timeout=100000 test/run.js",
+    "codacy": " NODE_ENV=test node resources/populate && node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --timeout=100000 test/run.js -R spec && cat ./coverage/lcov.info | CODACY_PROJECT_TOKEN=6038dc21f59c46b3b5d945fd4ad78dc3  ./node_modules/.bin/codacy-coverage && rm -rf ./coverage"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "author": "hermogenes <ferreira.hermogenes@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ship7software/hair-api"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "codacy-coverage": "^2.0.2",
+    "cors": "^2.8.3",
+    "crypto": "0.0.3",
+    "elastic-email": "^1.0.4",
+    "express": "^4.14.0",
+    "helmet": "^3.1.0",
+    "istanbul": "^0.4.5",
+    "jsonwebtoken": "^7.4.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "mongoose": "4.10.2",
+    "mongoose-autopopulate": "^0.5.0",
+    "mongoose-unique-validator": "^1.0.5",
+    "morgan": "^1.7.0",
+    "mustache": "^2.3.0",
+    "node-mailer": "^0.1.1",
+    "node-yaml-config": "0.0.4",
+    "ship7-api-lib": "^2.2.2",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0"
+  }
+}

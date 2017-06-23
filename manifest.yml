@@ -1,0 +1,4 @@
+applications:
+- name: ship7-hair-api
+  command: npm start
+  memory: 128m

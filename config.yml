@@ -1,0 +1,14 @@
+default:
+  server:
+    port: 4510
+  mongo:
+    url: mongodb://localhost/hair-api
+development:
+  mongo:
+    url: mongodb://root:1234@ds135592.mlab.com:35592/hair-dev
+stage:
+
+test:
+  mongo:
+    url: mongodb://root:1234@ds135532.mlab.com:35532/hair-test
+production:

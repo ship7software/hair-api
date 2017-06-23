@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  hair_web:
+    command: npm run dev
+    build: .
+    volumes:
+      - ./:/app
+    ports:
+      - "4501:4501"
+    links:
+      - hair_mongo
+    environment:
+      - MONGO_DB_URI=mongodb://hair_mongo:27017/hair-api
+
+  hair_mongo:
+    image: mongo
+    ports:
+      - "27018:27018"
+    volumes_from:
+      - hair_mongodata
+
+  hair_mongodata:
+    image: tianon/true
+    volumes:
+      - /data/db
