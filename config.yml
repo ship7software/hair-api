@@ -3,9 +3,16 @@ default:
     port: 4510
   mongo:
     url: mongodb://localhost/hair-api
+  raven: https://161cfc26212446f5a238d1835737860a:21d1228e72a64cefbf97cd616193f676@sentry.io/183144
+  auth:
+    api: http://localhost:4501
+    auth: Basic c3VwZXJ1c2VyOnN1cCZydTUzcjUmY3IzdA=
 development:
   mongo:
     url: mongodb://root:1234@ds135592.mlab.com:35592/hair-dev
+  auth:
+    api: https://ship7-auth-service.mybluemix.net
+    auth: Basic c3VwZXJ1c2VyOnN1cCZydTUzcjUmY3IzdA=
 stage:
 
 test:

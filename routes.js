@@ -1,7 +1,6 @@
 const Router = require('express').Router;
-const router = new Router();
-
-const service  = require('./model/service/service-router');
+const routerLoad = require('./model/loadRoutes');
+let router = new Router();
 
 router.route('/').get((req, res) => {
   res.json({
@@ -12,6 +11,6 @@ router.route('/').get((req, res) => {
   });
 });
 
-router.use('/service', service);
+router = routerLoad(router);
 
 module.exports = router;
